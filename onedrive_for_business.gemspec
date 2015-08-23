@@ -9,6 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Adam Michael"]
   spec.email         = ["adam@ajmichael.net"]
 
+  spec.license       = 'MIT'
+
   spec.summary       = %q{Access your OneDrive for Business storage.}
   spec.homepage      = "https://github.com/aj-michael/onedrive_for_business"
 

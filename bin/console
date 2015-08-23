@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "onedrive_for_business"
+
+require "irb"
+IRB.start

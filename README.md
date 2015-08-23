@@ -1,6 +1,6 @@
 # OneDriveForBusiness
 
-A wrapper library around the [Office 365 Files Api](https://msdn.microsoft.com/en-us/office/office365/api/files-rest-operations)
+A wrapper library around the [Office 365 Files Api](https://msdn.microsoft.com/en-us/office/office365/api/files-rest-operations).
 
 
 ## Installation
@@ -35,4 +35,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/aj-mic
 
 ## License
 
-[MIT](http://aj-michael.mit-license.org/)
+[MIT](http://ajmichael.mit-license.org/)

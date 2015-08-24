@@ -1,6 +1,6 @@
 # OneDriveForBusiness
 
-A wrapper library around the [Office 365 Files Api](https://msdn.microsoft.com/en-us/office/office365/api/files-rest-operations)
+A wrapper library around the [Office 365 Files Api](https://msdn.microsoft.com/en-us/office/office365/api/files-rest-operations).
 
 
 ## Installation
@@ -33,3 +33,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/aj-michael/onedrive_for_business.
 
+## License
+
+[MIT](http://ajmichael.mit-license.org/)

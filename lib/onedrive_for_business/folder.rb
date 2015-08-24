@@ -18,14 +18,31 @@ module OneDriveForBusiness
     # @return Folder
     def self.create_with_path!(drive, path)
       url = "#{drive.url}/files/getbypath('#{path}')"
-      resp =
-        http(url).put(url, nil, 'authorization' => "Bearer #{drive.access_token}")
+      resp = http(url).put(
+        url, nil, 'authorization' => "Bearer #{drive.access_token}")
+      Folder.new(JSON.parse(resp.body))
+    end
+
+    # @return Folder
+    def self.get_by_id(drive, id)
+      url = "#{drive.url}/files/#{id}"
+      resp = http(url).get(
+        url, 'authorization' => "Bearer #{drive.access_token}")
+      Folder.new(JSON.parse(resp.body))
+    end
+
+    # @return Folder
+    def self.get_by_path(drive, path)
+      url = "#{drive.url}/files/getbypath('#{path}')"
+      resp = http(url).get(
+        url, 'authorization' => "Bearer #{drive.access_token}")
       Folder.new(JSON.parse(resp.body))
     end
 
     def initialize(fields)
       @child_count = fields['childCount']
       @children = fields['children']
+      super
     end
 
     attr_reader :child_count    # FixNum

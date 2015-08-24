@@ -4,12 +4,12 @@ module OneDriveForBusiness
       @id = fields['id']
       @name = fields['name']
       @e_tag = fields['eTag']
-      @created_by = IdentitySet.new(fields['createdBy'])
-      @last_modified_by = IdentitySet.new(fields['lastModifiedBy'])
+      @created_by = IdentitySet.new(fields['createdBy']) if fields.include? 'createdBy'
+      @last_modified_by = IdentitySet.new(fields['lastModifiedBy']) if fields.include? 'lastModifiedBy'
       @date_time_created = fields['dateTimeCreated']
       @date_time_last_modified = fields['dateTimeLastModified']
       @size = fields['size']
-      @parent_reference = ItemReference.new(fields['parentReference'])
+      @parent_reference = ItemReference.new(fields['parentReference']) if fields.include? 'parentReference'
       @web_url = fields['webUrl']
       @type = fields['type']
     end

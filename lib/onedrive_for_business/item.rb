@@ -1,6 +1,7 @@
 module OneDriveForBusiness
   class Item
-    def initialize(fields)
+    def initialize(drive, fields)
+      @drive = drive
       @id = fields['id']
       @name = fields['name']
       @e_tag = fields['eTag']
@@ -18,5 +19,7 @@ module OneDriveForBusiness
               :date_time_created, :date_time_last_modified,
               :size, :parent_reference, :web_url, :type]
     FIELDS.each { |f| attr_reader f }
+
+    attr_reader :drive
   end
 end

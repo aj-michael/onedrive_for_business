@@ -1,3 +1,5 @@
+require_relative './item'
+
 module OneDriveForBusiness
   class File < Item
     def initialize(drive, fields)

@@ -58,7 +58,11 @@ module OneDriveForBusiness
       url = "#{drive.url}/Files/#{id}/children"
       resp = http(url).get(
         url, 'authorization' => "Bearer #{drive.access_token}")
-      File.new(drive, JSON.parse(resp.body))
+      JSON.parse(resp.body)['value'].select do |o|
+        o['type'] == 'File'
+      end.map do |o|
+        File.new(drive, o)
+      end
     end
   end
 end
